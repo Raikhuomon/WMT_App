@@ -41,14 +41,14 @@ class MainActivity : AppCompatActivity() {
                 teamAScore.text = "team A: $aScore"
                 teamBScore.text = "team B: $bScore"
 
-                var msg = if(aScore.toInt() > bScore.toInt()){
-                    "Team A is the winner"
+                var msg = ""
+                if(aScore.toInt() > bScore.toInt()){
+                   msg = "Team A is the winner"
+                }else if(aScore.toInt() == bScore.toInt()){
+                    msg = "It's a tie"
                 }else{
-                    "Team B is the winner"
+                   msg = "Team B is the winner"
                 }
-                if(aScore.toInt() == bScore.toInt()){
-                    "It's a tie" }
-
 
                 var alertDialog = AlertDialog.Builder(this)
                 alertDialog.setMessage(msg)
